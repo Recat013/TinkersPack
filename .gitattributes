@@ -1,0 +1,4 @@
+# Keep LF in the working tree on every machine. The resource pack files are
+# zipped byte-for-byte by --dist, so a line-ending flip would change the zip's
+# SHA-1 and silently invalidate resource-pack-sha1 in server.properties.
+* text=auto eol=lf

@@ -1,0 +1,19 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    { "item": "minecraft:golden_apple" },
+    { "item": "minecraft:dragon_breath" },
+    { "item": "minecraft:dragon_breath" },
+    { "item": "minecraft:diamond_block" },
+    { "item": "minecraft:diamond_block" }
+  ],
+  "level": 1,
+  "result": "tinkerspack:mending",
+  "slots": {
+    "abilities": 1
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/durability"
+  }
+}

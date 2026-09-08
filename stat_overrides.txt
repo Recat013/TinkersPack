@@ -1,0 +1,36 @@
+# ---------------------------------------------------------------------------
+#  TinkersPack - base stat overrides
+# ---------------------------------------------------------------------------
+#  Slot counts live in slot_deltas.txt. This file is for everything else: the
+#  raw numbers on an item's stat modules.
+#
+#      <item>   <module>   <stat>   <value>
+#
+#  <module> is either:
+#     base_stats       flat values added to the material-derived stats
+#     multiply_stats   multipliers applied to them (1.0 = no change)
+#
+#  Unlike slot_deltas.txt these are absolute values, not deltas - you are
+#  setting the number outright, because that's how stats read in-game. The
+#  build prints `old -> new` for each one so you can see what you replaced.
+#
+#  An item listed here gets a file written even if all its slot deltas are 0.
+#  If the item has no such module, or no such stat in it, it is created.
+#
+#  Valid stats (prefix them with `tconstruct:`):
+#     durability          attack_damage      attack_speed      mining_speed
+#     harvest_tier        armor              armor_toughness   knockback_resistance
+#     block_amount        block_angle        draw_speed        velocity
+#     accuracy            projectile_damage  water_inertia     use_item_speed
+#     sea_luck            lure
+#
+#  harvest_tier takes a tier name (e.g. minecraft:iron); everything else is a
+#  number. Blank lines and lines starting with # are ignored.
+#
+#  After editing, run:  python build_pack.py
+# ---------------------------------------------------------------------------
+
+# --- TINKERS' KATANAS ------------------------------------------------
+#     toning the katana down: it was 1.0 damage / 1.8 speed
+tinkers_katanas:katana    base_stats    tconstruct:attack_damage    0.8
+tinkers_katanas:katana    base_stats    tconstruct:attack_speed     1.4

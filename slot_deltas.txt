@@ -1,0 +1,129 @@
+# ---------------------------------------------------------------------------
+#  TinkersPack - modifier slot deltas
+# ---------------------------------------------------------------------------
+#  One line per tinkerable item. The four numbers are how much to ADD to that
+#  item's base slot counts, always in this order:
+#
+#      <item>            abilities  defense  upgrades  souls
+#
+#  A line of all zeros means "leave this item alone" - only items with at least
+#  one non-zero number (or an entry in stat_overrides.txt) get a file written
+#  into the datapack.
+#
+#  The trailing comment is what the mod currently gives that item, so
+#  `abilities 1, upgrades 3` plus a delta of `1 0 2 0` lands at
+#  2 abilities / 5 upgrades.
+#
+#  Notes:
+#   - Deltas may be negative, but the result may not go below 0.
+#   - Adding to a slot type the item does not currently have is fine; the type
+#     is simply created. Same for items with no slots at all.
+#   - Columns are split on whitespace, so line them up however you like.
+#   - Blank lines and lines starting with # are ignored.
+#
+#  After editing, run:  python build_pack.py
+# ---------------------------------------------------------------------------
+
+#                                     ab  def  up  souls
+
+# --- TINKERS' CONSTRUCT - HARVEST TOOLS ----------------------------
+tconstruct:pickaxe                   1   0   2   0     # abilities 1, upgrades 3
+tconstruct:war_pick                  1   0   2   0     # abilities 1, upgrades 3
+tconstruct:hand_axe                  1   0   2   0     # abilities 1, upgrades 3
+tconstruct:mattock                   1   0   2   0     # abilities 1, upgrades 3
+tconstruct:pickadze                  1   0   2   0     # abilities 1, upgrades 3
+tconstruct:excavator                 1   0   2   0     # abilities 1, upgrades 2
+tconstruct:sledge_hammer             1   0   2   0     # abilities 1, upgrades 2
+tconstruct:vein_hammer               1   0   2   0     # abilities 1, upgrades 2
+tconstruct:broad_axe                 1   0   2   0     # abilities 1, upgrades 2
+tconstruct:scythe                    1   0   2   0     # abilities 1, upgrades 2
+tconstruct:kama                      1   0   2   0     # abilities 1, upgrades 3
+tconstruct:flint_and_brick           0   0   0   0     # upgrades 1   <- left alone by choice
+
+# --- TINKERS' CONSTRUCT - MELEE WEAPONS ----------------------------
+tconstruct:sword                     1   0   2   0     # abilities 1, upgrades 3
+tconstruct:dagger                    1   0   2   0     # abilities 1, upgrades 3
+tconstruct:cleaver                   1   0   2   0     # abilities 1, upgrades 2
+tconstruct:battlesign                1   0   2   0     # abilities 1, defense 3
+tconstruct:swasher                   1   0   2   0     # abilities 1, upgrades 3
+tconstruct:minotaur_axe              1   0   2   0     # abilities 1, upgrades 3
+tconstruct:melting_pan               0   0   0   0     # abilities 2, defense 1, upgrades 1   <- left alone by choice
+
+# --- TINKERS' CONSTRUCT - RANGED / THROWN --------------------------
+#     (arrows and thrown ammo left at 0 by choice)
+tconstruct:longbow                   1   0   2   0     # abilities 1, upgrades 2
+tconstruct:crossbow                  1   0   2   0     # abilities 1, upgrades 3
+tconstruct:javelin                   1   0   2   0     # abilities 1, upgrades 2
+tconstruct:fishing_rod               1   0   2   0     # abilities 1, upgrades 3
+tconstruct:arrow                     0   0   0   0     # none
+tconstruct:shuriken                  0   0   0   0     # none
+tconstruct:throwing_axe              0   0   0   0     # none
+
+# --- TINKERS' CONSTRUCT - STAVES -----------------------------------
+#     (excluded by choice)
+tconstruct:earth_staff               0   0   0   0     # abilities 2, defense 3, upgrades 2
+tconstruct:ender_staff               0   0   0   0     # abilities 2, defense 1, upgrades 3
+tconstruct:ichor_staff               0   0   0   0     # abilities 3, upgrades 2
+tconstruct:sky_staff                 0   0   0   0     # abilities 2, upgrades 5
+
+# --- TINKERS' CONSTRUCT - PLATE ARMOR ------------------------------
+tconstruct:plate_helmet              1   2   0   0     # defense 3, upgrades 2
+tconstruct:plate_chestplate          1   2   0   0     # defense 3, upgrades 2
+tconstruct:plate_leggings            1   2   0   0     # defense 3, upgrades 2
+tconstruct:plate_boots               1   2   0   0     # defense 3, upgrades 2
+tconstruct:plate_shield              1   2   0   0     # defense 3, upgrades 2
+
+# --- TINKERS' CONSTRUCT - TRAVELERS ARMOR --------------------------
+tconstruct:travelers_helmet          1   0   2   0     # abilities 1, defense 2, upgrades 2
+tconstruct:travelers_chestplate      1   0   2   0     # abilities 1, defense 2, upgrades 2
+tconstruct:travelers_leggings        1   0   2   0     # abilities 1, defense 2, upgrades 2
+tconstruct:travelers_boots           1   0   2   0     # abilities 1, defense 2, upgrades 2
+tconstruct:travelers_shield          1   0   2   0     # abilities 1, defense 2, upgrades 2
+
+# --- TINKERS' CONSTRUCT - SLIME ARMOR ------------------------------
+#     (already upgrade-rich, so ability only)
+tconstruct:slime_helmet              1   0   0   0     # abilities 1, upgrades 5
+tconstruct:slime_chestplate          1   0   0   0     # abilities 1, upgrades 5
+tconstruct:slime_leggings            1   0   0   0     # abilities 1, upgrades 5
+tconstruct:slime_boots               1   0   0   0     # abilities 1, upgrades 5
+
+# --- TINKERS' THINGS - WEAPONS & TOOLS -----------------------------
+#     (sack, amethyst staff and chisel skipped by choice)
+tinkers_things:halberd               1   2   2   0     # abilities 1, upgrades 2
+tinkers_things:blockram              1   0   2   0     # abilities 1, upgrades 3
+tinkers_things:blowpipe              1   0   2   0     # abilities 1, upgrades 5
+tinkers_things:shortbow              1   0   2   0     # abilities 1, upgrades 3
+tinkers_things:shovel                1   0   2   0     # abilities 1, upgrades 5
+tinkers_things:chisel                0   0   0   0     # abilities 1, upgrades 4
+tinkers_things:amethyst_staff        0   0   0   0     # abilities 2, upgrades 2
+tinkers_things:sack                  0   0   0   0     # none
+
+# --- TINKERS' THINGS - LAMINAR ARMOR -------------------------------
+#     (laminar has no defense slots by default; +2 creates them)
+tinkers_things:laminar_helmet        1   3   0   0     # abilities 1, upgrades 2
+tinkers_things:laminar_chestplate    1   3   0   0     # abilities 1, upgrades 2
+tinkers_things:laminar_leggings      1   3   0   0     # abilities 1, upgrades 2
+tinkers_things:laminar_boots         1   3   0   0     # abilities 1, upgrades 2
+tinkers_things:laminar_shield        1   3   0   0     # abilities 1, upgrades 3
+
+# --- TINKERS' THINGS - MAKESHIFT ARMOR -----------------------------
+#     (left alone by choice)
+tinkers_things:makeshift_helmet      0   0   0   0     # defense 1, upgrades 2
+tinkers_things:makeshift_chestplate  0   0   0   0     # defense 1, upgrades 2
+
+# --- TINKERS' KATANAS ----------------------------------------------
+tinkers_katanas:katana               1   0   2   0     # abilities 1, upgrades 2
+tinkers_katanas:fuma_shuriken        1   0   2   0     # abilities 1, upgrades 2
+
+# --- TCOMPAT -------------------------------------------------------
+#     (assumed to follow the weapon bump - change if you'd rather it didn't)
+tcompat:glaive                       1   0   2   0     # abilities 1, upgrades 2
+
+# --- JEWELRY -------------------------------------------------------
+#     (no base slots by design; left at 0 on purpose)
+tinkersjewelry:ring                  0   0   0   0     # none
+tinkers_jewelry_ex:bracelet          0   0   0   0     # none
+tinkers_jewelry_ex:charm             0   0   0   0     # none
+tinkers_jewelry_ex:crown             0   0   0   0     # none
+tinkers_jewelry_ex:glove             0   0   0   0     # none
+tinkers_jewelry_ex:necklace          0   0   0   0     # none
