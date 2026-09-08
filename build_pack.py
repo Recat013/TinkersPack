@@ -44,7 +44,7 @@ RESOURCES_INSTALL_DIR = os.path.join(INSTANCE, "resourcepacks", "TinkersPack")
 # form always resolves to the newest release, so this URL never has to change --
 # publish a new release and it picks it up. Only the sha1 below it moves, and
 # --dist prints the replacement.
-RELEASE_URL = ("https://github.com/USER/REPO/releases/latest/download/"
+RELEASE_URL = ("https://github.com/Recat013/TinkersPack/releases/latest/download/"
                "TinkersPack-resources.zip")
 RESOURCE_PACK_PROMPT = "Modifier names and colors for the Tinkers' pack"
 
